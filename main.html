@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashmir Escapades</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/2af5e4f198.js" crossorigin="anonymous"></script>
+
+  <style type="text/tailwindcss">
+
+</style>
+  <script>
+    tailwind.config = {
+      theme: {
+        colors: {
+          primary: '#FF9933',
+          secondary: '#FCFAEE',
+          white: '#fff',
+          black: '#000'
+        },
+        extend: {
+          backgroundImage: {
+            "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            "gradient-conic":
+              "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          },
+          screens: {
+            'xs': '480px',    // Custom extra small screen
+            'sm': '640px',    // Custom small screen
+            'md': '768px',    // Custom medium screen
+            'lg': '1024px',   // Custom large screen
+            'xl': '1280px',   // Custom extra large screen
+            '2xl': '1536px',  // Custom extra, extra large screen
+          },
+          fontFamily: {
+            gochi: ['Gochi Hand',"serif"]
+          }
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="overflow-x-hidden bg-secondary">
+
+  <main class="min-h-screen w-full ">
+
+    <!-- NAVBAR -->
+
+    <div class="absolute top-0 w-full flex flex-col text-[#fff] font-semibold uppercase tracking-widest text-sm z-10">
+      <div class="text-white border-white border-b-[0.5px] p-3 hidden md:flex items-center justify-between">
+        <div class="flex items-center gap-5 text-xs lowercase font-light">
+          <div class="flex items-center gap-2">
+            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80C141.1 80 48 173.1 48 288V392c0 13.3-10.7 24-24 24s-24-10.7-24-24V288C0 146.6 114.6 32 256 32s256 114.6 256 256V392c0 13.3-10.7 24-24 24s-24-10.7-24-24V288c0-114.9-93.1-208-208-208zM80 352c0-35.3 28.7-64 64-64h16c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V352zm288-64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V320c0-17.7 14.3-32 32-32h16z" />
+            </svg>
+            <span>+91-914954231</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M64 208.1L256 65.9 448 208.1v47.4L289.5 373c-9.7 7.2-21.4 11-33.5 11s-23.8-3.9-33.5-11L64 255.5V208.1zM256 0c-12.1 0-23.8 3.9-33.5 11L25.9 156.7C9.6 168.8 0 187.8 0 208.1V448c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V208.1c0-20.3-9.6-39.4-25.9-51.4L289.5 11C279.8 3.9 268.1 0 256 0z" />
+            </svg>
+            <span>business@example.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-10">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg>
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+          </svg>
+          <div class="bg-primary px-5 py-2">
+            <button>Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex items-center p-5 lg:py-0">
+        <div class="w-full ">
+          <h1 class="text-white w-full text-xl xl:text-2xl">Kashmir Escapades</h1>
+        </div>
+        <div id="hamburger" class=" flex justify-end xl:hidden" onclick="onBurgerClick()">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </div>
+        <div id="sideBarRef"
+          class="text-black absolute top-0 -right-[300px] w-[300px] md:-right-[300px] bg-secondary h-screen xl:hidden">
+          <div class="w-full flex justify-end p-5">
+            <svg onclick="onBurgerClick()" xmlns="http://www.w3.org/2000/svg" width="18"
+              viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+          </div>
+
+          <a href=""
+            class="nav-links px-4 py-4 border-t-[1px] bg-primary bg-opacity-0  border-[#cfcfcf] flex items-center justify-between transition-all duration-200 hover:bg-opacity-100 hover:text-white ease-in-out">
+            <p>Home</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8"
+              viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+            </svg>
+            <a href=""
+              class="nav-links px-4 py-4 border-t-[1px] bg-primary bg-opacity-0  border-[#cfcfcf] flex items-center justify-between transition-all duration-200 hover:bg-opacity-100 hover:text-white ease-in-out">
+              <p>Destinations</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8"
+                viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+              </svg>
+            </a>
+
+            <a href=""
+              class="nav-links px-4 py-4 border-t-[1px] bg-primary bg-opacity-0  border-[#cfcfcf] flex items-center justify-between transition-all duration-200 hover:bg-opacity-100 hover:text-white ease-in-out">
+              <p>Blog</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8"
+                viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+              </svg>
+            </a>
+
+            <a href=""
+              class="nav-links px-4 py-4 border-t-[1px] bg-primary bg-opacity-0  border-[#cfcfcf] flex items-center justify-between transition-all duration-200 hover:bg-opacity-100 hover:text-white ease-in-out">
+              <p>Contact</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8"
+                viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+              </svg>
+            </a>
+
+        </div>
+
+        <div class="text-white w-full hidden xl:flex text-[14px] lg:text-[20px]">
+
+          <a href=""
+            class="nav-links flex items-center gap-4 px-4 py-4 transition-all ease-in-out duration-200 hover:text-primary">
+            <p>Home</p>
+
+          </a>
+          <a href=""
+            class="nav-links flex items-center gap-4 px-4 py-4 transition-all ease-in-out duration-200 hover:text-primary">
+            <p>Destination</p>
+
+          </a>
+          <a href=""
+            class="nav-links flex items-center gap-4 px-4 py-4 transition-all ease-in-out duration-200 hover:text-primary">
+            <p>Blog</p>
+
+          </a>
+          <a href=""
+            class="nav-links flex items-center gap-4 px-4 py-4 transition-all ease-in-out duration-200 hover:text-primary">
+            <p>Contact</p>
+
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+    id="home-header-image"
+      class="h-[80vh] lg:h-[90vh] bg-[#00000048] relative bg-cover bg-center flex flex-col gap-10 items-center justify-center"
+      style=" background-blend-mode: overlay;">
+
+      <div class="flex items-center flex-col justify-center gap-5 text-white lg:pt-[10%]">
+        <h3 class="text-4xl tracking-wider text-[#fbfbfb] font-gochi">
+          Discover the World
+        </h3>
+        <h1 class="font-black text-6xl text-center tracking-wider leading-[50px] lg:leading-[80px] w-2/3 ">
+          Plan a trip to Kashmir
+        </h1>
+      </div>
+      <div class="bg-primary px-6 py-2 text-md font-bold text-white">
+        <button class="uppercase">Travel guide</button>
+      </div>
+    </header>
+
+    <article class="grid grid-cols-5 place-items-center px-3 py-20 lg:py-10 relative">
+      <h1 class="order-2 lg:order-1 col-span-3 md:col-span-3 lg:col-span-2 text-4xl md:text-3xl font-bold ">
+        Top Destinations suggested by travelled users
+      </h1>
+
+
+      <div id="mySwiper"
+        class="swiper-container  w-full h-[130px] !absolute -top-20 col-span-5 lg:!relative lg:top-0 lg:col-span-2 lg:w-[500px] xl:w-[600px] lg:h-[150px] lg:overflow-hidden order-2">
+        <div class="swiper-wrapper ">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div
+            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/Thumb-Slider-01.jpg) ;">
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_585370086.png) ;">
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_586872603.png) ;">
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_447414502.jpg) ;">
+          </div>
+          </div>
+         
+          
+
+
+        </div>
+      </div>
+
+      <div
+        class="flex items-center gap-5 order-4 col-span-2  place-self-start justify-self-end md:col-span-1 md:self-center xl:place-self-center">
+        <button
+          class="backBtn1 flex items-center justify-center border-black border-[1px] w-16 h-16 lg:w-14 lg:h-14 text-xl lg:text-xs rounded-full"
+          >
+          <svg class="w-[20px] lg:w-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </button>
+
+        <button
+          class="nextBtn1 flex items-center justify-center border-black border-[1px] w-16 h-16 lg:w-14 lg:h-14 text-xl lg:text-xs rounded-full"
+          >
+          <svg class="w-[20px] lg:w-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </button>
+      </div>
+    </article>
+    <!-- 
+        <article class="bg-[#F1EFDF] py-20 flex items-center justify-center">
+          <div class="grid grid-cols-1 gap-y-16 px-12 md:grid-cols-2 xl:grid-cols-3 justify-items-center md:gap-x-16 ">
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                01
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/i.svg"
+                    alt="kashmir escapades destination icon"
+                    width={70}
+                    height={70}
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Best Destinations</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                02
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/skiing.svg"
+                    alt="kashmir escapades destination icon"
+                    width={100}
+                    height={100}
+                    class="w-[90%] h-[90%] md:w-full md:h-full xl:w-[110%] xl:h-[110%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Skiing</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                03
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/hike.svg"
+                    alt="kashmir escapades destination icon"
+                    width={70}
+                    height={70}
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Hiking</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                04
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/cycle.svg"
+                    alt="kashmir escapades destination icon"
+                    width={100}
+                    height={100}
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Cycling</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                05
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/shikara.svg"
+                    alt="kashmir escapades destination icon"
+                    width={100}
+                    height={100}
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Shikara Ride</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+                06
+              </h1>
+              <div class="relative flex items-start gap-10 z-1">
+                <div class="flex  w-2/3 ">
+                  <Image
+                    src="/rafting.svg"
+                    alt="kashmir escapades destination icon"
+                    width={100}
+                    height={100}
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                  />
+                </div>
+                <div class="space-y-5 md:space-y-2 tracking-wide">
+                  <h1 class="text-xl font-black ">Rafting</h1>
+                  <p class="text-[#6b6a5e] leading-7 font-extralight text-sm">
+                    Suspendisse interdum consectetur libero id. Blandit libero
+                    volut ornare.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>  -->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="./gsap.js"></script>
+  <script src="./swiper.js"></script>
+</body>
+
+</html>

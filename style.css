@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Gochi Hand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/GochiHand-Regular.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.gochi-hand-regular {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Default root font size for all screens */
+
+html {
+  font-size: 16px; /* You can set your base font size here */
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media (max-width: 600px) {
+  html {
+    font-size: 14px; /* Adjust the font size for small screens */
+  }
+}
+
+/* Media query for screens with a minimum width of 601 pixels and a maximum width of 1200 pixels */
+@media (min-width: 601px) and (max-width: 1200px) {
+  html {
+    font-size: 18px; /* Adjust the font size for medium screens */
+  }
+}
+
+/* Media query for screens with a minimum width of 1201 pixels */
+@media (min-width: 1201px) {
+  html {
+    font-size: 20px; /* Adjust the font size for large screens */
+  }
+}
+
+
+
+/* UI CSS */
+
+
