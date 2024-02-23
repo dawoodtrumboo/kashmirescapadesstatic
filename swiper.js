@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerView: 2,
       slidesPerGroup: 1,
       slidesPerGroupSkip: 2,
-      on: {
-        slideChange: function () {
-          console.log("Slide change");
-        },
-      },
+      breakpoints:{
+        1800:{
+          slidesPerView:3
+        }
+      }
     });
     const updateBackgroundImage = (index)=>{
         const backgroundImage = `url(${images[index]})`;

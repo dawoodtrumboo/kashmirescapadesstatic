@@ -23,6 +23,10 @@ html {
   html {
     font-size: 14px; /* Adjust the font size for small screens */
   }
+
+  p{
+    font-size: 1.2rem;
+  }
 }
 
 /* Media query for screens with a minimum width of 601 pixels and a maximum width of 1200 pixels */
@@ -36,6 +40,12 @@ html {
 @media (min-width: 1201px) {
   html {
     font-size: 20px; /* Adjust the font size for large screens */
+  }
+}
+
+@media (min-width: 1601px) {
+  html {
+    font-size: 32px; /* Adjust the font size for large screens */
   }
 }
 

@@ -34,6 +34,13 @@
             'xl': '1280px',   // Custom extra large screen
             '2xl': '1536px',  // Custom extra, extra large screen
           },
+          colors:{
+            primary:'#FF9933',
+            secondary:'#fcfaee',
+            white:"#fff",
+            black:'#000',
+            primaryFont:'#555555'
+          },
           fontFamily: {
             gochi: ['Gochi Hand',"serif"]
           }
@@ -197,6 +204,7 @@
       </div>
     </header>
 
+    <!-- 1st background Swiper -->
     <article class="grid grid-cols-5 place-items-center px-3 py-20 lg:py-10 relative">
       <h1 class="order-2 lg:order-1 col-span-3 md:col-span-3 lg:col-span-2 text-4xl md:text-3xl font-bold ">
         Top Destinations suggested by travelled users
@@ -204,30 +212,30 @@
 
 
       <div id="mySwiper"
-        class="swiper-container  w-full h-[130px] !absolute -top-20 col-span-5 lg:!relative lg:top-0 lg:col-span-2 lg:w-[500px] xl:w-[600px] lg:h-[150px] lg:overflow-hidden order-2">
+        class="swiper-container  w-full h-[130px] !absolute -top-20 col-span-5 lg:!relative lg:top-0 lg:col-span-2 lg:w-[500px] xl:w-full lg:h-[150px] lg:overflow-hidden order-2">
         <div class="swiper-wrapper ">
           <!-- Slides -->
           <div class="swiper-slide">
             <div
-            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            class=" min-w-[180px] md:min-w-[180px] lg:min-w-[220px] w-full h-full rounded-[40px] md:rounded-full bg-cover bg-center"
             style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/Thumb-Slider-01.jpg) ;">
           </div>
           </div>
           <div class="swiper-slide">
             <div
-            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            class=" min-w-[180px] md:min-w-[180px] lg:min-w-[220px] w-full h-full rounded-[40px] md:rounded-full bg-cover bg-center"
             style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_585370086.png) ;">
           </div>
           </div>
           <div class="swiper-slide">
             <div
-            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            class=" min-w-[180px] md:min-w-[180px] lg:min-w-[220px] w-full h-full rounded-[40px] md:rounded-full bg-cover bg-center"
             style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_586872603.png) ;">
           </div>
           </div>
           <div class="swiper-slide">
             <div
-            class=" bg-[#2af4fb] min-w-[180px] md:min-w-[180px] lg:min-w-[220px] h-full rounded-[40px] md:rounded-full bg-cover bg-center"
+            class=" min-w-[180px] md:min-w-[180px] lg:min-w-[220px] w-full h-full rounded-[40px] md:rounded-full bg-cover bg-center"
             style="background-image:url(https://advenx.wpengine.com/wp-content/uploads/2023/04/AdobeStock_447414502.jpg) ;">
           </div>
           </div>
@@ -253,21 +261,22 @@
         </button>
       </div>
     </article>
-    <!-- 
-        <article class="bg-[#F1EFDF] py-20 flex items-center justify-center">
+
+
+
+    <!-- Feature Section -->
+        <article class="bg-[#F1EFDF] py-20 flex items-center justify-center ">
           <div class="grid grid-cols-1 gap-y-16 px-12 md:grid-cols-2 xl:grid-cols-3 justify-items-center md:gap-x-16 ">
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 01
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/i.svg"
+                  <img
+                    src="./assets/images/i.svg"
                     alt="kashmir escapades destination icon"
-                    width={70}
-                    height={70}
-                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%]  2xl:w-[80%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -281,17 +290,16 @@
             </div>
   
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 02
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/skiing.svg"
+                  <img
+                    src="./assets/images/skiing.svg"
                     alt="kashmir escapades destination icon"
-                    width={100}
-                    height={100}
-                    class="w-[90%] h-[90%] md:w-full md:h-full xl:w-[110%] xl:h-[110%] text-[#6b6a5e]"
+                    
+                    class="w-[90%] h-[90%] md:w-full md:h-full xl:w-[110%] xl:h-[110%]  2xl:w-[90%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -305,17 +313,17 @@
             </div>
   
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 03
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/hike.svg"
+                  <img
+                    src="./assets/images/hike.svg"
                     alt="kashmir escapades destination icon"
                     width={70}
                     height={70}
-                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%]  2xl:w-[80%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -329,17 +337,16 @@
             </div>
   
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 04
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/cycle.svg"
+                  <img
+                    src="./assets/images/cycle.svg"
                     alt="kashmir escapades destination icon"
-                    width={100}
-                    height={100}
-                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                    
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%]  2xl:w-[80%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -353,17 +360,16 @@
             </div>
   
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 05
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/shikara.svg"
+                  <img
+                    src="./assets/images/shikara.svg"
                     alt="kashmir escapades destination icon"
-                    width={100}
-                    height={100}
-                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                    
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%]  2xl:w-[80%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -376,17 +382,16 @@
               </div>
             </div>
             <div class="relative">
-              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] opacity-75">
+              <h1 class="absolute leading-none top-0 left-0 font-black text-[#dbdace] text-[120px] 2xl:text-[200px] opacity-75">
                 06
               </h1>
               <div class="relative flex items-start gap-10 z-1">
                 <div class="flex  w-2/3 ">
-                  <Image
-                    src="/rafting.svg"
+                  <img
+                    src="./assets/images/rafting.svg"
                     alt="kashmir escapades destination icon"
-                    width={100}
-                    height={100}
-                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%] text-[#6b6a5e]"
+                    
+                    class="w-[70%] h-[70%] md:w-[90%] md:h-[90%] xl:w-[100%] xl:h-[100%]  2xl:w-[80%] text-[#6b6a5e]"
                   />
                 </div>
                 <div class="space-y-5 md:space-y-2 tracking-wide">
@@ -399,7 +404,61 @@
               </div>
             </div>
           </div>
-        </article>  -->
+        </article> 
+
+      
+        <!-- 2nd Swiper Section -->
+
+        <article class="flex flex-col items-center w-full border min-h-[800px] py-10 px-3 gap-10">
+          <!-- left div -->
+          <div class="w-full flex flex-col items-center gap-2">
+            <div class="w-[35px]">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.2 42.2" style="enable-background:new 0 0 42.2 42.2;" xml:space="preserve"><style type="text/css">	.lpin-0{fill:none;stroke:currentcolor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}	.lpin-1{fill:none;stroke:currentcolor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:28,28;}</style><g>	<g>		<path class="lpin-0" d="M32.8,0.8c4.7,0,8.5,3.8,8.5,8.6c0,1.3-0.3,2.6-0.9,3.8c-1.1,2.2-6.7,6-7.6,10.2   c-1.6-4-6.5-8-7.6-10.2C23.1,8.9,24.8,3.8,29,1.7C30.2,1.1,31.5,0.8,32.8,0.8z"></path>		<path class="lpin-0" d="M32.8,5c2.3,0,4.2,1.9,4.2,4.2s-1.9,4.2-4.2,4.2c-2.3,0-4.2-1.9-4.2-4.2c0,0,0,0,0,0   C28.6,6.9,30.5,5,32.8,5z"></path>		<path class="lpin-0" d="M12.4,9.8c6.4,0,11.6,5.2,11.6,11.6c0,1.8-0.4,3.6-1.2,5.2c-1.5,3-9.1,8.2-10.4,13.9   C10.3,35,3.5,29.6,2,26.6C-0.8,20.9,1.5,13.9,7.2,11C8.8,10.2,10.6,9.8,12.4,9.8z"></path>		<path class="lpin-0" d="M12.4,15.5c3.2,0,5.8,2.6,5.8,5.8c0,3.2-2.6,5.8-5.8,5.8s-5.8-2.6-5.8-5.8l0,0   C6.7,18.1,9.2,15.5,12.4,15.5z"></path>		<path class="lpin-1" d="M15.7,41.1c4,0.6,11.5,0.1,16.4-0.3c8.8-0.8,7.7-6.5,0.1-7c-1.4-0.1-5-0.2-5.9-0.7   c-1.7-0.9-2.1-3.4,0.4-4.1c1.3-0.2,2.6-0.7,3.8-1.4c1.1-0.9,2-2.1,2.4-3.5"></path>	</g></g></svg>
+            </div>
+            <h2 class="text-3xl font-gochi tracking-wider">Cherish your memories</h2>
+            <h1 class="font-black text-4xl">Explore World</h1>
+            <p class="text-center text-primaryFont leading-[30px] font-light tracking-wide px-6">Fermentum odio eu feugiat pretium nibh. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. 
+              Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Lectus proin nibh nisl condimentum id venenatis.</p>
+          </div>
+
+          <!-- right div with Swiper -->
+          <div class="w-full space-y-8">
+
+            <div class="swiper-parent h-[550px] relative w-full rounded-full bg-cover bg-center overflow-hidden" style="background-image: url('https://advenx.wpengine.com/wp-content/uploads/2023/03/image-box-image03.jpg');">
+                <div class="swiper-overlay absolute rounded-full top-0 left-0 h-full w-full bg-black bg-[#] bg-opacity-35"></div>    
+              <div class="swiper-content absolute bottom-10 w-full flex flex-col items-center rounded-full text-white space-y-5 ">
+                    <h2 class="font-black text-4xl">USA</h2>
+                    <p class="w-4/5 text-center text-2xl text-[#d6d6d6]">Explore New York,California,New Mexico & more</p>
+                    <button class="flex items-center gap-2 leading-none mt-10 text-[#d6d6d6] hover:text-black ease-in-out transition-all">
+                      READ MORE
+                      <svg class="w-[12px] h-[12px] lg:w-[18px]" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+
+                    </button>
+                  </div>
+            </div>
+
+            <!-- Swiper Buttons -->
+            <div
+            class="flex items-center justify-center gap-5 order-4 col-span-2  place-self-start justify-self-end md:col-span-1 md:self-center xl:place-self-center">
+            <button
+              class="backBtn1 flex items-center justify-center border-black border-[2px] w-14 h-14 lg:w-14 lg:h-14 text-xl lg:text-xs rounded-full"
+              >
+              <svg class="w-[12px] lg:w-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+           
+            </button>
+    
+            <button
+              class="nextBtn1 flex items-center justify-center border-black border-[2px] w-14 h-14 lg:w-14 lg:h-14 text-xl lg:text-xs rounded-full"
+              >
+              <svg class="w-[12px] lg:w-[18px]"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+            
+              
+            </button>
+          </div>
+
+          </div>
+
+        </article>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
