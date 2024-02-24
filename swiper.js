@@ -41,6 +41,40 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
     document.querySelector('.nextBtn1').addEventListener('click',handleSwiperNext);
     document.querySelector('.backBtn1').addEventListener('click',handleSwiperPrev);
+
+
+    var mySwiper2 = new Swiper('#mySwiper2',{
+      spaceBetween:20,
+      slidesPerView:1,
+      slidesPerGroup:1,
+      slidesPerGroupSkip:2,
+      breakpoints:{
+        765:{
+          slidesPerView:2
+        }
+      }
+    })
+    let slide2 =0;
+    const handleSwiperNext2 = () =>{
+      if(slide2<mySwiper2.slides.length-1){ 
+          mySwiper2.slideNext();
+          slide2++;
+       
+      }
+      
+  }
+
+
+  const handleSwiperPrev2 = () =>{
+      if(slide2>0){ 
+          mySwiper2.slidePrev();
+          slide2--;
+      }
+  }
+
+    document.querySelector('.nextBtn2').addEventListener('click',handleSwiperNext2);
+    document.querySelector('.backBtn2').addEventListener('click',handleSwiperPrev2);
   });
