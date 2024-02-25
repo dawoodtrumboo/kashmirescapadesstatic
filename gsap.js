@@ -1,4 +1,5 @@
 const sidebar = document.getElementById('sideBarRef');
+var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 let isOpen = false;
 
 function onBurgerClick(){
@@ -17,12 +18,30 @@ swiperParents.forEach(swiperParent => {
   const swiperHeader = swiperParent.querySelector('.swiper-content h2');
   const swiperText = swiperParent.querySelector('.swiper-content p');
   const swiperBtn = swiperParent.querySelector('.swiper-content button');
-
+console.log(windowWidth)
+ 
+  let swiperBtnInitialPos = null;
+  let swiperHeaderInitialPos = null;
+  let swiperTextInitalPos = null;
+  if(windowWidth<640){
+    swiperBtnInitialPos = 50
+    swiperHeaderInitialPos = 0;
+    swiperTextInitalPos=0;
+    
+  }else if(windowWidth<1536){
+    swiperBtnInitialPos = 120
+    swiperHeaderInitialPos = 0;
+    swiperTextInitalPos=0;
+  }else {
+    swiperBtnInitialPos=150
+    swiperHeaderInitialPos = 0;
+    swiperTextInitalPos=0;
+  }
   // Initial State
   gsap.set(swiperOverlay, { backgroundColor: 'rgba(0,0,0,0.20)', y: 0 });
-  gsap.set(swiperHeader, { y: 0 });
-  gsap.set(swiperText, { y: 0 });
-  gsap.set(swiperBtn, { y: 50 });
+  gsap.set(swiperHeader, { y: swiperHeaderInitialPos });
+  gsap.set(swiperText, { y: swiperTextInitalPos });
+  gsap.set(swiperBtn, { y:swiperBtnInitialPos });
 
   // Hover Animation of Swiper
   const hoverAnimation = gsap.timeline({ paused: true });

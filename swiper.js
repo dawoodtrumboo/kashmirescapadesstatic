@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       slidesPerGroup:1,
       slidesPerGroupSkip:2,
       breakpoints:{
-        765:{
+        640:{
           slidesPerView:2
         }
       }
