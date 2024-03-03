@@ -1,0 +1,40 @@
+.ball {
+
+    animation: moveUpDown 1s linear infinite, rotate 1s linear infinite; /* Adjust duration and timing function as needed */
+    transform-origin: center center; /* Set the transform origin to the center of the element */
+  }
+  
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100); /* Adjust the vertical distance as needed */
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .ellipse {
+    rotate: 360deg;
+    animation: moveScale 0.962s linear infinite; /* Adjust duration and timing function as needed */
+    transform-origin: center center; /* Set the transform origin to the center of the ellipse element */
+  }
+  
+  
+  @keyframes moveScale {
+    0%, 100% {
+      transform: scaleX(0.5);
+    }
+    50% {
+      transform: scaleX(1);
+    }
+  }

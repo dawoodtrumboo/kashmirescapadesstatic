@@ -11,6 +11,10 @@ function onBurgerClick(){
         ease: "power2.inOut",
     });
 }
+
+
+
+
 const swiperParents = document.querySelectorAll('.swiper-parent');
 
 swiperParents.forEach(swiperParent => {
@@ -29,7 +33,7 @@ console.log(windowWidth)
     swiperTextInitalPos=0;
     
   }else if(windowWidth<1536){
-    swiperBtnInitialPos = 120
+    swiperBtnInitialPos = 140
     swiperHeaderInitialPos = 0;
     swiperTextInitalPos=0;
   }else {
@@ -99,3 +103,24 @@ console.log(windowWidth)
     );
   }
 });
+
+
+
+
+// DESTINATION GRID 1
+
+const grid = document.querySelectorAll('.destination-grid-card');
+
+grid.forEach(grid=>{
+  const img = grid.querySelector('img');
+
+  grid.addEventListener('mouseover',()=>{
+    img.style.transition='transform 0.3s ease-in-out';
+    img.style.transform = 'scale(1.1)';
+  })
+
+  grid.addEventListener('mouseout',()=>{
+    img.style.transition='transform 0.3s ease-in-out';
+    img.style.transform = 'scale(1)';
+  })
+})

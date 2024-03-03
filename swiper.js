@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
       breakpoints:{
         640:{
           slidesPerView:2
+        },
+        1320:{
+          slidesPerView:3
         }
       }
     })
